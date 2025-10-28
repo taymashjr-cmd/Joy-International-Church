@@ -9550,7 +9550,7 @@ textarea {
     color: #777;
     position: relative;
     display: inline-block; }
-    .site-footer a:before {
+    .site-footer a: before {
       position: absolute;
       left: 0;
       right: 0;
@@ -9562,9 +9562,9 @@ textarea {
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }
-    .site-footer a:hover {
+    .site-footer a: hover {
       color: #000; }
-      .site-footer a:hover:before {
+      .site-footer a:hover: before {
         background: #519259; }
   .site-footer .footer-cta h2, .site-footer .footer-cta .h2 {
     font-size: 30px;
@@ -9595,7 +9595,7 @@ textarea {
       background: #80003c;
       border-radius: 50%;
       color: #fff; }
-      .site-footer .social li a:before {
+      .site-footer .social li a: before {
         display: none; }
       .site-footer .social li a > span {
         position: absolute;
@@ -9604,6 +9604,6 @@ textarea {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
-      .site-footer .social li a:hover {
+      .site-footer .social li a: hover {
         background: #519259;
         color: #fff; }
