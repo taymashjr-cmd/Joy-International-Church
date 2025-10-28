@@ -2363,7 +2363,119 @@ textarea.form-control-lg {
 
 .form-check-inline .form-check-input ~ .valid-feedback {
   margin-left: .5em; }
+/* Scoped Ministries Section */
+.ministries-v2 {
+  background-color: #fff;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
 
+.ministries-v2__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ministries-v2__subtitle {
+  color: #8b0033;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ministries-v2__title {
+  color: #8b0033;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.ministries-v2__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Card */
+.ministries-v2__card {
+  background-color: #f9f7f7;
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(139, 0, 51, 0.1);
+  max-width: 380px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.ministries-v2__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(139, 0, 51, 0.15);
+}
+
+/* Favicon-style Icon */
+.ministries-v2__icon-top {
+  text-align: center;
+  background-color: #8b0033;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(139, 0, 51, 0.3);
+}
+
+.ministries-v2__card-title {
+  color: #8b0033;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ministries-v2__intro {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.ministries-v2__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ministries-v2__list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.ministries-v2__list strong {
+  color: #8b0033;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ministries-v2__title {
+    font-size: 28px;
+  }
+
+  .ministries-v2__card {
+    padding: 30px 20px;
+  }
+}
 .invalid-feedback {
   display: none;
   width: 100%;
