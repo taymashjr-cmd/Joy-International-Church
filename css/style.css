@@ -9235,7 +9235,7 @@ textarea {
   font-size: 2.5rem !important; }
 
 .opacity-5 {
-  opacity: 0.9 !important; }
+  opacity: 0.9 ! important; }
 
 .hero {
   background-size: cover;
@@ -9413,7 +9413,7 @@ textarea {
 .service .heading {
   font-size: 18px; }
 
-.service [class^="icon-"] {
+.service [class^=" icon-"] {
   font-size: 60px;
   color: #80003c; }
 
@@ -9438,7 +9438,7 @@ textarea {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: .1rem; }
-    .testimonial-nav span:hover {
+    .testimonial-nav span: hover {
       background: #5aa263;
       color: #fff; }
     .testimonial-nav span[aria-disabled="true"] {
@@ -9463,7 +9463,7 @@ textarea {
   background: rgba(81, 146, 89, 0.1);
   color: #519259;
   text-align: center; }
-  .custom-pagination a:hover, .custom-pagination a.active {
+  .custom-pagination a: hover, .custom-pagination a.active {
     background: #519259;
     color: #fff; }
 
@@ -9489,7 +9489,7 @@ textarea {
     width: 100%;
     height: 100%; }
 
-.quick-contact-item [class*="icon-"] {
+.quick-contact-item [class*=" icon-"] {
   font-size: 2rem;
   display: inline-block;
   width: 80px;
@@ -9503,7 +9503,7 @@ textarea {
   text-align: center;
   position: relative;
   color: #2C736B; }
-  .quick-contact-item [class*="icon-"]:before {
+  .quick-contact-item [class*=" icon-"]: before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9515,7 +9515,7 @@ textarea {
   font-size: 20px; }
 
 textarea {
-  height: auto !important; }
+  height: auto ! important; }
 
 .counter {
   color: #80003c; }
@@ -9550,7 +9550,7 @@ textarea {
     color: #777;
     position: relative;
     display: inline-block; }
-    .site-footer a:before {
+    .site-footer a: before {
       position: absolute;
       left: 0;
       right: 0;
@@ -9562,9 +9562,9 @@ textarea {
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }
-    .site-footer a:hover {
+    .site-footer a: hover {
       color: #000; }
-      .site-footer a:hover:before {
+      .site-footer a:hover: before {
         background: #519259; }
   .site-footer .footer-cta h2, .site-footer .footer-cta .h2 {
     font-size: 30px;
@@ -9595,7 +9595,7 @@ textarea {
       background: #80003c;
       border-radius: 50%;
       color: #fff; }
-      .site-footer .social li a:before {
+      .site-footer .social li a: before {
         display: none; }
       .site-footer .social li a > span {
         position: absolute;
@@ -9604,6 +9604,6 @@ textarea {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
-      .site-footer .social li a:hover {
+      .site-footer .social li a: hover {
         background: #519259;
         color: #fff; }
