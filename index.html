@@ -82,36 +82,48 @@
 			</div>
 		</div>
 	</nav>
-	<!-- style="background-image: url('images/hero_1.jpg'); " -->
-	<div class="hero overlay" style="background-image: url('images/landscape-1.jpg'); ">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-5 me-auto text-start pe-lg-5">
-					<!-- Faith • Hope • Love Section -->
-<style>
-  .faith-hope-love-heading {
-    font-size: 18px;          /* reduced slightly for better balance */
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 1.5px;
-    white-space: nowrap;
-    color: #333;              /* change this if needed */
-  }
+	<!-- HERO SECTION -->
+<div class="hero overlay" style="background-image: url('images/landscape-1.jpg'); background-size: cover; background-position: center;">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
 
-  /* Optional subtle fade effect */
-  [data-aos="fade-left"] {
-    transition: all 0.6s ease-in-out;
-  }
-</style>
+      <!-- LEFT SIDE: Faith • Hope • Love -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+        <style>
+          .faith-hope-love-heading {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+            color: #333;
+          }
 
-<div class="intro-text">
-  <div class="mb-4"> 
-    <h1 data-aos="fade-left" class="faith-hope-love-heading">
-      Faith • Hope • Love
-    </h1>
+          [data-aos="fade-left"] {
+            transition: all 0.6s ease-in-out;
+          }
+        </style>
+
+        <div class="intro-text">
+          <div class="mb-4"> 
+            <h1 data-aos="fade-left" class="faith-hope-love-heading">
+              Faith • Hope • Love
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: Video -->
+      <div class="col-lg-6 col-md-12 text-center">
+        <video width="100%" controls autoplay muted loop style="border-radius: 10px; max-height: 300px; object-fit: cover;">
+          <source src="videos/your-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
   </div>
 </div>
-
 
 						<div class="">
 							<p class="mb-5 opacity-5" data-aos="fade-left" data-aos-delay="200">Reaching Nations with the Love of Jesus. Join us in our mission to be a beacon of light, bringing faith and hope to every corner of the globe.</p>
