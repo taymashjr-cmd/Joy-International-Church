@@ -48,40 +48,43 @@
 		<div class="container">
 			<div class="site-navigation">
 				<a href="index.html" class="logo m-0 float-left">JOY International Church</a>
-
+	
 				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-					<li class="active"><a href="index.html">Home</a></li>
+	
+					<!-- HOME with dropdown -->
+					<li class="has-children active">
+						<a href="index.html">Home</a>
+						<ul class="dropdown">
+							<li><a href="Cosmo.html">Cosmo City</a></li>
+							<li><a href="Rhino.html">Rhino</a></li>
+						</ul>
+					</li>
+	
+					<!-- SERMONS -->
 					<li class="has-children">
 						<a href="#">Sermons</a>
 						<ul class="dropdown">
 							<li><a href="#">Sermons</a></li>
 							<li><a href="#">Sermons Single</a></li>
 							<li class="has-children">
-								<!--<a href="#">Dropdown</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>-->
+								<!-- Placeholder for more dropdowns if needed -->
 							</li>
 						</ul>
 					</li>
+	
 					<li><a href="#">Ministries</a></li>
 					<li><a href="#">Events</a></li>
 					<li><a href="#">Contact</a></li>
 					<li class="cta-button"><a href="#">Request a prayer</a></li>
 				</ul>
-
-				
-
+	
 				<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
-
-				
 			</div>
 		</div>
 	</nav>
+	
 	<!-- style="background-image: url('images/hero_1.jpg'); " -->
 	<div class="hero overlay" style="background-image: url('images/landscape-1.jpg'); ">
 		<div class="container">
@@ -408,11 +411,7 @@
 
 		</div>
 	</div>
-
 	
-
-
-
 	<div class="section">
 		<div class="container">
 			<div class="row mb-4 text-center">
@@ -496,47 +495,52 @@
 		</div>
 	</div>
 
-
-	
-
-
-	<div class="section">
+	<<div class="section">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-lg-4" data-aos="fade-up">
 					<span class="subheading mb-4 d-block">About us</span>
 					<h2 class="mb-4 heading">Welcome to TheChurch</h2>
-					<p>At Joy,We proclaim Jesus Christ as the head of the Church and the living Word of God. Our mission is to establish His Kingdom by teaching the Word with practical application, expressing love through giving, and restoring families to transform lives and communities. We are rooted in spiritual values of faith, hope, and love—grounded in the Word, expecting God's will, and reaching out to others with compassion. Our life values center on empowering people to use their God-given gifts, strengthening families, practicing faithful stewardship, and living with integrity. Everything we do reflects our desire to live out God's truth and love in every area of life.
-
+					<p>
+						At Joy, we proclaim Jesus Christ as the head of the Church and the living Word of God. Our mission is to establish His Kingdom by teaching the Word with practical application, expressing love through giving, and restoring families to transform lives and communities. We are rooted in spiritual values of faith, hope, and love—grounded in the Word, expecting God's will, and reaching out to others with compassion. Our life values center on empowering people to use their God-given gifts, strengthening families, practicing faithful stewardship, and living with integrity. Everything we do reflects our desire to live out God's truth and love in every area of life.
 					</p>
-					<p class="mt-5"><a href="about.html" class="btn btn-primary">Know more about us</a></p>
+					<p class="mt-5">
+						<a href="about.html" class="btn btn-primary">Know more about us</a>
+					</p>
 				</div>
+	
 				<div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-					<!-- <img src="images/landscape-1.jpg" alt="Image" class="img-fluid rounded"> -->
-					<div class="row">
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-1.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-2.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-3.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-4.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-5.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-						<div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
-							<img src="images/sq-6.jpg" alt="Image" class="img-fluid rounded">
-						</div>
-					</div>
+					<!-- Single Image with Zoom + Slide Animation -->
+					<img src="images/as.png" alt="About Image" class="img-fluid rounded animate-image" width="1152" height="896">
 				</div>
 			</div>
 		</div>
+	
+		<!-- INLINE CSS FOR ANIMATION -->
+		<style>
+			/* Zoom + Slide-in Animation, moved downward */
+			.animate-image {
+				opacity: 0;
+				width: 80%; /* responsive width */
+				max-width: 1152px; /* limit max width */
+				height: auto; /* maintain aspect ratio */
+				transform: translate(60px, 40px) scale(0.9); /* move down 20px */
+				animation: zoomSlideIn 1.5s ease-out forwards;
+			}
+	
+			@keyframes zoomSlideIn {
+				0% {
+					opacity: 0;
+					transform: translate(60px, 20px) scale(0.9);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0, 20px) scale(1);
+				}
+			}
+		</style>
 	</div>
+	
 
 
 
