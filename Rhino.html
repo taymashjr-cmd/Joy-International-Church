@@ -55,33 +55,33 @@
 	
 					<!-- HOME with dropdown -->
 					<li class="has-children active">
-						<a href="index.html" style="color: #fff !important;">Home</a>
+						<a href="index.html" style="color: #8b0033 !important;">Home</a>
 						<ul class="dropdown">
-							<li><a href="Cosmo.html">Cosmo City Branch</a></li>
-							<li><a href="Rhino.html">Rhino Branch</a></li>
+							<li><a href="Cosmo.html">Cosmo City</a></li>
+							<li><a href="Rhino.html">Rhino</a></li>
 						</ul>
 					</li>
 	
 					<!-- SERMONS -->
 					<li class="has-children">
-						<a href="#" style="color: #fff !important;">Sermons</a>
+						<a href="#" style="color: #8b0033 !important;">Sermons</a>
 						<ul class="dropdown">
 							<li><a href="#">Sermons</a></li>
 							<li><a href="#">Sermons Single</a></li>
 						</ul>
 					</li>
 	
-					<li><a href="#" style="color: #fff !important;">Ministries</a></li>
-					<li><a href="#" style="color: #fff !important;">Events</a></li>
-					<li><a href="#" style="color: #fff !important;">Contact</a></li>
-					<li class="cta-button"><a href="#" style="color: #fff !important;">Request a prayer</a></li>
+					<li><a href="#" style="color: #8b0033 !important;">Ministries</a></li>
+					<li><a href="#" style="color:  #8b0033!important;">Events</a></li>
+					<li><a href="#" style="color: #8b0033 !important;">Contact</a></li>
+					<li class="cta-button"><a href="#" style="color: #8b0033 !important;">Request a prayer</a></li>
 				</ul>
 	
 				<a href="#" 
 				   class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" 
 				   data-toggle="collapse" 
 				   data-target="#main-navbar" 
-				   style="color: #fff !important;">
+				   style="color: #8b0033 !important;">
 					<span></span>
 				</a>
 	
@@ -137,6 +137,17 @@
 				position: relative;
 				overflow: hidden;
 			}
+			/* ================================================
+   PARALLAX EFFECT (ADDED — DOES NOT OVERRIDE ANYTHING)
+=================================================== */
+
+@media (min-width: 769px) {
+    .hero-bg-video {
+        transform: translate(-50%, -50%) translateY(var(--parallax-offset, 0px));
+        transition: transform 0.05s linear;
+    }
+}
+
 	
 			/* VIDEO BACKGROUND */
 			.hero-bg-video {
@@ -270,10 +281,86 @@
 					margin-top: 30px;
 				}
 			}
+	
+			/* ==========================================================
+			   EXTRA MOBILE IMPROVEMENTS ADDED (NO OVERRIDES)
+			========================================================== */
+			@media(max-width: 768px) {
+	
+				/* Allow typewriter headings to wrap safely */
+				.typewriter {
+					white-space: normal;
+					width: 100% !important;
+					border-right: none;
+				}
+	
+				.hero-heading {
+					font-size: 30px !important;
+					line-height: 1.3;
+					word-break: break-word;
+					margin-bottom: 15px;
+				}
+	
+				.hero-description {
+					font-size: 16px;
+					line-height: 1.6;
+					padding: 0 15px;
+					margin-top: 10px;
+				}
+	
+				.hero-btn {
+					margin-top: 15px;
+					padding: 12px 35px;
+					font-size: 16px;
+				}
+	
+				.hero-img {
+					max-width: 360px;
+					width: 100%;
+				}
+			}
 		</style>
 	</div>
-	
-	
+	<section class="branches-section" style="width: 100%; padding: 80px 0; background: #f8f8f8;">
+		<div class="container" style="max-width: 100%; text-align: center;">
+		  <h2 style="font-size: 32px; margin-bottom: 40px; font-weight: 700; animation: fadeIn 1s ease-in-out;">Our Branches</h2>
+	  
+		  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; animation: slideUp 1.2s ease-in-out;">
+			<a href="index.html" class="branch-btn">Main Fourways Branch</a>
+			<a href="Cosmo.html" class="branch-btn">Cosmo City Branch</a>
+		  </div>
+		</div>
+	  </section>
+	  
+	  <style>
+		.branch-btn {
+		  padding: 18px 40px;
+		  background: #80003c;
+		  color: #fff;
+		  text-decoration: none;
+		  border-radius: 12px;
+		  font-size: 20px;
+		  font-weight: 600;
+		  transition: 0.3s;
+		  box-shadow: 0 6px 20px #80003c;
+		}
+	  
+		.branch-btn:hover {
+		  transform: translateY(-4px);
+		  background: #80003c;
+		  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+		}
+	  
+		@keyframes fadeIn {
+		  from { opacity: 0; }
+		  to { opacity: 1; }
+		}
+	  
+		@keyframes slideUp {
+		  from { opacity: 0; transform: translateY(30px); }
+		  to { opacity: 1; transform: translateY(0); }
+		}
+	  </style>
 	<!-- Ministries Section (Scoped & Safe) -->
 <section class="ministries-v2">
 	<div class="ministries-v2__container">
@@ -1042,7 +1129,20 @@
 	<script src="js/navbar.js"></script>
 	<script src="js/counter.js"></script>
 	<script src="js/custom.js"></script>
-
+	<script>
+		document.addEventListener("scroll", function () {
+			const scrolled = window.scrollY;
+			const video = document.querySelector(".hero-bg-video");
+		
+			if (!video) return;
+		
+			// Adjust sensitivity (smaller number = smoother)
+			const offset = scrolled * 0.15; 
+		
+			video.style.setProperty("--parallax-offset", offset + "px");
+		});
+		</script>
+		
 	
 </body>
 </html>
