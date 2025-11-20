@@ -56,33 +56,33 @@
 	
 					<!-- HOME with dropdown -->
 					<li class="has-children active">
-						<a href="index.html" style="color: #fff !important;">Home</a>
+						<a href="index.html" style="color: #8b0033 !important;">Home</a>
 						<ul class="dropdown">
-							<li><a href="Cosmo.html">Cosmo City Branch</a></li>
-							<li><a href="Rhino.html">Rhino Branch</a></li>
+							<li><a href="Cosmo.html">Cosmo City</a></li>
+							<li><a href="Rhino.html">Rhino</a></li>
 						</ul>
 					</li>
 	
 					<!-- SERMONS -->
 					<li class="has-children">
-						<a href="#" style="color: #fff !important;">Sermons</a>
+						<a href="#" style="color: #8b0033!important;">Sermons</a>
 						<ul class="dropdown">
 							<li><a href="#">Sermons</a></li>
 							<li><a href="#">Sermons Single</a></li>
 						</ul>
 					</li>
 	
-					<li><a href="#" style="color: #fff !important;">Ministries</a></li>
-					<li><a href="#" style="color: #fff !important;">Events</a></li>
-					<li><a href="#" style="color: #fff !important;">Contact</a></li>
-					<li class="cta-button"><a href="#" style="color: #fff !important;">Request a prayer</a></li>
+					<li><a href="#" style="color: #8b0033 !important;">Ministries</a></li>
+					<li><a href="#" style="color: #8b0033 !important;">Events</a></li>
+					<li><a href="#" style="color: #8b0033 !important;">Contact</a></li>
+					<li class="cta-button"><a href="#" style="color:#8b0033!important;">Request a prayer</a></li>
 				</ul>
 	
 				<a href="#" 
 				   class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" 
 				   data-toggle="collapse" 
 				   data-target="#main-navbar" 
-				   style="color: #fff !important;">
+				   style="color: #8b0033 !important;">
 					<span></span>
 				</a>
 	
@@ -99,13 +99,11 @@
 				<div class="col-left">
 					<div class="intro-text">
 	
-						<h1 class="hero-heading typewriter">J.I.C Cosmo City Branch</h1>
+						<h1 class="hero-heading typewriter heading1">J.I.C Cosmo City Branch</h1>
 	
-						<h1 class="hero-heading typewriter">Faith • Hope • Love</h1>
+						<h1 class="hero-heading typewriter heading2">Faith • Hope • Love</h1>
 	
-						<p class="hero-description">
-							Reaching Nations with the Love of Jesus. Join us in our mission to be a beacon of light, bringing faith and hope to every corner of the globe.
-						</p>
+						<p class="hero-description">Reaching Nations with the Love of Jesus. Join us in our mission to be a beacon of light, bringing faith and hope to every corner of the globe.</p>
 	
 						<a href="about.html" class="hero-btn">About US</a>
 					</div>
@@ -121,9 +119,9 @@
 	
 		<!-- STAND-ALONE OVERRIDE CSS -->
 		<style>
-			/* ==========================================================
-			   Hero Section Stand-Alone Overrides (Ignores Theme CSS)
-			========================================================== */
+			/* ------------------------
+			   HERO SECTION STYLES
+			------------------------ */
 			.custom-hero-section {
 				background-color: #ffffff !important;
 				padding: 80px 0;
@@ -147,26 +145,12 @@
 			.col-left { flex: 1 1 45%; }
 			.col-right { flex: 1 1 45%; text-align: center; }
 	
-	
-			/* ==========================================================
-			   TEXT COLOR OVERRIDE (h1, p, ul, li)
-			========================================================== */
 			.custom-hero-section h1,
-			.custom-hero-section h2,
-			.custom-hero-section h3,
-			.custom-hero-section h4,
-			.custom-hero-section h5,
-			.custom-hero-section h6,
-			.custom-hero-section p,
-			.custom-hero-section ul,
-			.custom-hero-section li {
+			.custom-hero-section p {
 				color: #8b0033 !important;
 			}
 	
-	
-			/* ==========================================================
-			   BUTTON
-			========================================================== */
+			/* BUTTON */
 			.hero-btn {
 				display: inline-block;
 				background: #8b0033;
@@ -176,38 +160,16 @@
 				font-weight: bold;
 				text-decoration: none;
 				transition: 0.3s ease;
+				opacity: 0; /* start hidden for animation */
+				animation: fadeInUp 0.6s forwards;
+				animation-delay: 4s; /* after headings + paragraph */
 			}
 	
 			.hero-btn:hover {
 				background: #8b0033;
 			}
 	
-	
-			/* ==========================================================
-			   TYPEWRITER HEADING
-			========================================================== */
-			.typewriter {
-				overflow: hidden;
-				white-space: nowrap;
-				border-right: 3px solid #8b0033;
-				width: 0;
-				animation: typing 3s steps(30, end) forwards,
-						   blink 0.7s infinite;
-			}
-	
-			@keyframes typing {
-				from { width: 0; }
-				to { width: 100%; }
-			}
-	
-			@keyframes blink {
-				50% { border-color: transparent; }
-			}
-	
-	
-			/* ==========================================================
-			   IMAGE ANIMATION (Slide + Zoom)
-			========================================================== */
+			/* IMAGE ANIMATION */
 			.hero-img {
 				width: 100%;
 				max-width: 540px;
@@ -229,47 +191,143 @@
 				}
 			}
 	
+			/* ------------------------
+			   TYPEWRITER HEADINGS
+			------------------------ */
+			.typewriter {
+				overflow: hidden;
+				white-space: nowrap;
+				border-right: 3px solid #8b0033;
+				width: 0;
+				display: inline-block;
+			}
 	
-			/* ==========================================================
-			   RESPONSIVE (Mobile)
-			========================================================== */
-			@media(max-width: 768px) {
+			/* Heading1 */
+			.heading1 {
+				animation: typing1 2s steps(30, end) forwards, blink 0.7s infinite;
+			}
+	
+			/* Heading2 (starts after heading1 finishes) */
+			.heading2 {
+				animation: typing2 2s steps(30, end) forwards, blink 0.7s infinite;
+				animation-delay: 2s; /* after heading1 */
+			}
+	
+			/* Paragraph fade-in */
+			.hero-description {
+				opacity: 0;
+				animation: fadeInUp 0.8s forwards;
+				animation-delay: 4s; /* after both headings */
+			}
+	
+			@keyframes typing1 {
+				from { width: 0; }
+				to { width: 100%; }
+			}
+	
+			@keyframes typing2 {
+				from { width: 0; }
+				to { width: 100%; }
+			}
+	
+			@keyframes blink {
+				50% { border-color: transparent; }
+			}
+	
+			@keyframes fadeInUp {
+				from { opacity: 0; transform: translateY(20px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+	
+			/* ------------------------
+			   MOBILE RESPONSIVE
+			------------------------ */
+			@media (max-width: 768px) {
 				.custom-hero-row {
 					flex-direction: column;
 					text-align: center;
+					gap: 25px;
 				}
 	
 				.col-left, .col-right {
 					flex: 1 1 100%;
+					width: 100%;
 				}
 	
 				.hero-heading {
-					font-size: 36px;
+					font-size: 30px;
+					line-height: 1.3;
+					white-space: normal !important;
+					word-break: break-word;
+				}
+	
+				.typewriter {
+					white-space: normal !important;
+					overflow-wrap: break-word;
+				}
+	
+				.hero-description {
+					font-size: 16px;
+					line-height: 1.6;
+					padding: 0 15px;
+					margin-top: 10px;
+				}
+	
+				.hero-btn {
+					margin-top: 15px;
+					font-size: 16px;
+					padding: 12px 35px;
 				}
 	
 				.hero-img {
-					margin-top: 30px;
+					max-width: 360px;
+					width: 100%;
+					margin: 20px auto 0;
+					display: block;
 				}
 			}
 		</style>
 	</div>
-	
-<!-- Ministries Section (Scoped & Safe) -->
-<style>
-  .ministries-v2 {
-    background-color: #8b0033 !important;
-    padding: 60px 0;
-  }
-  .ministries-v2 * {
-    color: #fff !important; /* makes text readable on dark background */
-  }
-  .ministries-v2__card {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 10px;
-    padding: 20px;
-  }
-</style>
-
+	<section class="branches-section" style="width: 100%; padding: 80px 0; background: #f8f8f8;">
+		<div class="container" style="max-width: 100%; text-align: center;">
+		  <h2 style="font-size: 32px; margin-bottom: 40px; font-weight: 700; animation: fadeIn 1s ease-in-out;">Our Branches</h2>
+	  
+		  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; animation: slideUp 1.2s ease-in-out;">
+			<a href="index.html" class="branch-btn">Main Fourways Branch</a>
+			<a href="Rhino.html" class="branch-btn">Rhino Branch</a>
+		  </div>
+		</div>
+	  </section>
+	  
+	  <style>
+		.branch-btn {
+		  padding: 18px 40px;
+		  background: #80003c;
+		  color: #fff;
+		  text-decoration: none;
+		  border-radius: 12px;
+		  font-size: 20px;
+		  font-weight: 600;
+		  transition: 0.3s;
+		  box-shadow: 0 6px 20px #80003c;
+		}
+	  
+		.branch-btn:hover {
+		  transform: translateY(-4px);
+		  background: #80003c;
+		  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+		}
+	  
+		@keyframes fadeIn {
+		  from { opacity: 0; }
+		  to { opacity: 1; }
+		}
+	  
+		@keyframes slideUp {
+		  from { opacity: 0; transform: translateY(30px); }
+		  to { opacity: 1; transform: translateY(0); }
+		}
+	  </style>	
 <section class="ministries-v2">
 	<div class="ministries-v2__container">
 	  <h2 class="ministries-v2__subtitle">Our Ministries</h2>
